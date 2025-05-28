@@ -19,7 +19,7 @@ The portfolio is running locally at: [http://localhost:3000](http://localhost:30
 ## 📁 Project Structure
 
 ```
-kushal-portfolio/
+portfolio-react/
 ├── public/
 │   ├── index.html          # HTML template with fonts and meta tags
 │   ├── manifest.json       # PWA manifest
@@ -41,7 +41,6 @@ kushal-portfolio/
 │   ├── index.tsx          # Application entry point
 │   ├── index.css          # Basic CSS reset
 │   └── react-app-env.d.ts # TypeScript environment definitions
-├── KushalHP_CV_Product.pdf # Resume/CV document
 ├── package.json           # Dependencies and scripts
 ├── tsconfig.json          # TypeScript configuration
 ├── README.md             # This file
@@ -149,7 +148,7 @@ All Lottie animations are hosted on `lottie.host` and integrated using `@dotlott
 - Responsive sizing for different screen sizes
 - Optimized for smooth playback across devices
 
-## �� Customization
+## 🔧 Customization
 
 ### Colors & Branding
 The primary gradient and colors can be customized in the styled components:
