@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { DotLottiePlayer } from '@dotlottie/react-player';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { media } from '../styles/GlobalStyles';
 
 const GetInTouchContainer = styled.section`
@@ -363,7 +363,7 @@ const GetInTouchSection: React.FC = () => {
 
           <TouchVisual>
             <LottieTouchContainer>
-              <DotLottiePlayer
+              <DotLottieReact
                 src="https://lottie.host/f4147008-d192-469c-8009-40dd59cc4f40/nqthxw0pNK.lottie"
                 loop
                 autoplay

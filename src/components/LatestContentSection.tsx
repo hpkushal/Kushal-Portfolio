@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { DotLottiePlayer } from '@dotlottie/react-player';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { media } from '../styles/GlobalStyles';
 
 const LatestContentContainer = styled.section`
@@ -417,7 +417,7 @@ const LatestContentSection: React.FC = () => {
           </HeaderText>
           <HeaderVisual>
             <LottieContentContainer>
-              <DotLottiePlayer
+              <DotLottieReact
                 src="https://lottie.host/c808b92b-a13a-46ce-a4c8-becad30e6fc1/MzVoxeVy5K.lottie"
                 loop
                 autoplay

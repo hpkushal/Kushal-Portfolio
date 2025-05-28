@@ -22,6 +22,10 @@ const FooterContainer = styled.footer`
   ${media.tablet} {
     padding: 50px 20px 30px;
   }
+
+  ${media.mobile} {
+    display: none;
+  }
 `;
 
 const Container = styled.div`

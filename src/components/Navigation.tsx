@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import { Link, useLocation } from 'react-router-dom';
 import { media } from '../styles/GlobalStyles';
 
 const FloatingNav = styled.nav<{ isHidden: boolean; isCompact: boolean }>`
@@ -19,6 +20,10 @@ const FloatingNav = styled.nav<{ isHidden: boolean; isCompact: boolean }>`
     width: 95%;
     top: 15px;
     ${props => props.isCompact && `top: 8px;`}
+  }
+
+  ${media.mobile} {
+    display: none;
   }
 `;
 
@@ -97,6 +102,32 @@ const NavLink = styled.a<{ isCompact: boolean }>`
   }
 `;
 
+const RouterNavLink = styled(Link)<{ isCompact: boolean }>`
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: ${props => props.isCompact ? '13px' : '14px'};
+  transition: all 0.3s ease;
+  position: relative;
+  padding: ${props => props.isCompact ? '6px 12px' : '8px 16px'};
+  border-radius: ${props => props.isCompact ? '16px' : '20px'};
+
+  &:hover {
+    color: #feca57;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+  }
+
+  ${media.mobile} {
+    font-size: 12px;
+    padding: 6px 12px;
+    ${props => props.isCompact && `
+      font-size: 11px;
+      padding: 4px 8px;
+    `}
+  }
+`;
+
 const NavLogo = styled.div<{ isCompact: boolean }>`
   position: absolute;
   left: 50%;
@@ -110,7 +141,7 @@ const NavLogo = styled.div<{ isCompact: boolean }>`
   }
 `;
 
-const Logo = styled.a<{ isCompact: boolean }>`
+const Logo = styled(Link)<{ isCompact: boolean }>`
   font-family: 'Dancing Script', cursive;
   font-size: ${props => props.isCompact ? '24px' : '28px'};
   font-weight: 700;
@@ -133,6 +164,7 @@ const Navigation: React.FC = () => {
   const [isHidden, setIsHidden] = useState(false);
   const [isCompact, setIsCompact] = useState(false);
   const [lastScrollTop, setLastScrollTop] = useState(0);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -185,18 +217,22 @@ const Navigation: React.FC = () => {
     <FloatingNav isHidden={isHidden} isCompact={isCompact}>
       <NavContainer isCompact={isCompact}>
         <NavSection isCompact={isCompact}>
-          <NavLink 
-            href="/about" 
+          <RouterNavLink 
+            to="/about" 
             isCompact={isCompact}
           >
             About Me
-          </NavLink>
+          </RouterNavLink>
           <NavLink 
             href="#writing" 
             isCompact={isCompact}
             onClick={(e) => {
               e.preventDefault();
-              scrollToSection('writing');
+              if (location.pathname !== '/') {
+                window.location.href = '/#writing';
+              } else {
+                scrollToSection('writing');
+              }
             }}
           >
             Writing
@@ -206,7 +242,11 @@ const Navigation: React.FC = () => {
             isCompact={isCompact}
             onClick={(e) => {
               e.preventDefault();
-              scrollToSection('get-in-touch');
+              if (location.pathname !== '/') {
+                window.location.href = '/#get-in-touch';
+              } else {
+                scrollToSection('get-in-touch');
+              }
             }}
           >
             Get Help
@@ -215,12 +255,8 @@ const Navigation: React.FC = () => {
 
         <NavLogo isCompact={isCompact}>
           <Logo 
-            href="#home" 
+            to="/" 
             isCompact={isCompact}
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToSection('home');
-            }}
           >
             Kushal
           </Logo>
@@ -232,7 +268,11 @@ const Navigation: React.FC = () => {
             isCompact={isCompact}
             onClick={(e) => {
               e.preventDefault();
-              scrollToSection('resume');
+              if (location.pathname !== '/') {
+                window.location.href = '/#resume';
+              } else {
+                scrollToSection('resume');
+              }
             }}
           >
             Resume
@@ -242,7 +282,11 @@ const Navigation: React.FC = () => {
             isCompact={isCompact}
             onClick={(e) => {
               e.preventDefault();
-              scrollToSection('projects');
+              if (location.pathname !== '/') {
+                window.location.href = '/#projects';
+              } else {
+                scrollToSection('projects');
+              }
             }}
           >
             Projects
@@ -252,7 +296,11 @@ const Navigation: React.FC = () => {
             isCompact={isCompact}
             onClick={(e) => {
               e.preventDefault();
-              scrollToSection('downloads');
+              if (location.pathname !== '/') {
+                window.location.href = '/#downloads';
+              } else {
+                scrollToSection('downloads');
+              }
             }}
           >
             Downloads

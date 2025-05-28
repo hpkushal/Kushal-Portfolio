@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import styled from 'styled-components';
-import { DotLottiePlayer } from '@dotlottie/react-player';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { media } from '../styles/GlobalStyles';
 
 const HeroContainer = styled.section`
@@ -12,6 +12,10 @@ const HeroContainer = styled.section`
   padding: 100px 20px 50px;
   background: #FFFFFF !important;
   background-color: #FFFFFF !important;
+
+  ${media.mobile} {
+    display: none;
+  }
 `;
 
 const HeroBackground = styled.div`
@@ -216,7 +220,7 @@ const HeroSection: React.FC = () => {
   const [currentCharIndex, setCurrentCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
-  const words = ['Strategy', 'Marketing', 'Delivery'];
+  const words = useMemo(() => ['Strategy', 'Marketing', 'Delivery'], []);
 
   useEffect(() => {
     const currentWord = words[currentWordIndex];
@@ -282,7 +286,7 @@ const HeroSection: React.FC = () => {
 
         <HeroVisual>
           <LottieContainer>
-            <DotLottiePlayer
+            <DotLottieReact
               src="https://lottie.host/fe3b9efa-3eb2-477b-adfc-953fcfb44e8c/GGN5kYmRPU.lottie"
               loop
               autoplay

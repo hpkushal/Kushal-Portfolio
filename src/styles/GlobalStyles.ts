@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -9,6 +9,8 @@ export const GlobalStyles = createGlobalStyle`
 
   html {
     background: #FFFFFF !important;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
   }
 
   body {
@@ -17,6 +19,34 @@ export const GlobalStyles = createGlobalStyle`
     background: #FFFFFF !important;
     background-color: #FFFFFF !important;
     min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    touch-action: manipulation;
+  }
+
+  /* Mobile touch optimizations */
+  @media (max-width: 480px) {
+    body {
+      font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    input, textarea, select {
+      font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    button {
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+    }
+    
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+  }
+
+  /* Improved scrolling on mobile */
+  * {
+    -webkit-overflow-scrolling: touch;
   }
 
   /* Keyframe animations from original */
