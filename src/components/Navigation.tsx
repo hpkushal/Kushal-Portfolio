@@ -278,20 +278,12 @@ const Navigation: React.FC = () => {
           >
             Resume
           </RouterNavLink>
-          <NavLink 
-            href="#projects" 
+          <RouterNavLink 
+            to="/projects" 
             isCompact={isCompact}
-            onClick={(e) => {
-              e.preventDefault();
-              if (location.pathname !== '/') {
-                window.location.href = '/#projects';
-              } else {
-                scrollToSection('projects');
-              }
-            }}
           >
             Projects
-          </NavLink>
+          </RouterNavLink>
           <NavLink 
             href="#downloads" 
             isCompact={isCompact}

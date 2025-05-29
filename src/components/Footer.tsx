@@ -361,10 +361,10 @@ const Footer: React.FC = () => {
                 Resume
               </FooterLink>
               <FooterLink 
-                href="#projects"
+                href="/projects"
                 onClick={(e) => {
                   e.preventDefault();
-                  scrollToSection('projects');
+                  handleNavigation('/projects');
                 }}
               >
                 Projects

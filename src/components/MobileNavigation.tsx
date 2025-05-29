@@ -307,19 +307,9 @@ const MobileNavigation: React.FC = () => {
             </MobileRouterLink>
           </MobileMenuItem>
           <MobileMenuItem>
-            <MobileMenuLink
-              href="#projects"
-              onClick={(e) => {
-                e.preventDefault();
-                if (location.pathname !== '/') {
-                  window.location.href = '/#projects';
-                } else {
-                  scrollToSection('projects');
-                }
-              }}
-            >
+            <MobileRouterLink to="/projects" onClick={closeMenu}>
               Projects
-            </MobileMenuLink>
+            </MobileRouterLink>
           </MobileMenuItem>
           <MobileMenuItem>
             <MobileMenuLink

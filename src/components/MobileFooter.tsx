@@ -262,10 +262,10 @@ const MobileFooter: React.FC = () => {
                 Resume
               </MobileFooterLink>
               <MobileFooterLink 
-                href="#projects"
+                href="/projects"
                 onClick={(e) => {
                   e.preventDefault();
-                  scrollToSection('projects');
+                  handleNavigation('/projects');
                 }}
               >
                 Projects
