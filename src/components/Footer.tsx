@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 import { media } from '../styles/GlobalStyles';
 
 const FooterContainer = styled.footer`
@@ -278,11 +279,28 @@ const SocialLink = styled.a`
 `;
 
 const Footer: React.FC = () => {
+  const navigate = useNavigate();
+  
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    // If we're not on home page, navigate to home first
+    if (window.location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
+  };
+
+  const handleNavigation = (path: string) => {
+    navigate(path);
   };
 
   return (
@@ -291,33 +309,41 @@ const Footer: React.FC = () => {
         <FooterContent>
           <FooterNav>
             <FooterNavSection>
-              <FooterLink href="/about">About Me</FooterLink>
               <FooterLink 
-                href="#writing"
+                href="/about"
                 onClick={(e) => {
                   e.preventDefault();
-                  scrollToSection('writing');
+                  handleNavigation('/about');
                 }}
               >
-                Writing
+                About Me
               </FooterLink>
               <FooterLink 
-                href="#get-help"
+                href="/#what-i-do"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('what-i-do');
+                }}
+              >
+                What I Do
+              </FooterLink>
+              <FooterLink 
+                href="/#get-in-touch"
                 onClick={(e) => {
                   e.preventDefault();
                   scrollToSection('get-in-touch');
                 }}
               >
-                Get Help
+                Office Hours
               </FooterLink>
             </FooterNavSection>
 
             <FooterLogo>
               <FooterLogoLink 
-                href="#home"
+                href="/"
                 onClick={(e) => {
                   e.preventDefault();
-                  scrollToSection('home');
+                  handleNavigation('/');
                 }}
               >
                 <img src="/ShipwithKushal Logo.png" alt="ShipwithKushal Logo" />
@@ -326,31 +352,29 @@ const Footer: React.FC = () => {
 
             <FooterNavSection>
               <FooterLink 
-                href="#resume"
+                href="/resume"
                 onClick={(e) => {
                   e.preventDefault();
-                  scrollToSection('resume');
+                  handleNavigation('/resume');
                 }}
               >
                 Resume
               </FooterLink>
               <FooterLink 
-                href="#projects"
+                href="/#latest-content"
                 onClick={(e) => {
                   e.preventDefault();
-                  scrollToSection('projects');
+                  scrollToSection('latest-content');
                 }}
               >
-                Projects
+                Latest Content
               </FooterLink>
               <FooterLink 
-                href="#downloads"
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection('downloads');
-                }}
+                href="/KushalHP_CV_Product.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Downloads
+                Download CV
               </FooterLink>
             </FooterNavSection>
           </FooterNav>
@@ -365,20 +389,33 @@ const Footer: React.FC = () => {
 
           <FooterSocialSection>
             <FooterSocial>
-              <SocialLink href="#" aria-label="LinkedIn">
+              <SocialLink 
+                href="https://linkedin.com/in/kushal-hp-09121995" 
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
                 <i className="fab fa-linkedin-in"></i>
               </SocialLink>
-              <SocialLink href="#" aria-label="GitHub">
+              <SocialLink 
+                href="https://github.com/hpkushal" 
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
                 <i className="fab fa-github"></i>
               </SocialLink>
-              <SocialLink href="#" aria-label="Email">
+              <SocialLink 
+                href="mailto:hp.kushal95@outlook.com" 
+                aria-label="Email"
+              >
                 <i className="fas fa-envelope"></i>
               </SocialLink>
-              <SocialLink href="#" aria-label="Facebook">
-                <i className="fab fa-facebook-f"></i>
-              </SocialLink>
-              <SocialLink href="#" aria-label="Instagram">
-                <i className="fab fa-instagram"></i>
+              <SocialLink 
+                href="tel:+19024033023" 
+                aria-label="Phone"
+              >
+                <i className="fas fa-phone"></i>
               </SocialLink>
             </FooterSocial>
           </FooterSocialSection>

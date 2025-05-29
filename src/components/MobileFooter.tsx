@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 import { media } from '../styles/GlobalStyles';
 
 const MobileFooterContainer = styled.footer`
@@ -180,11 +181,28 @@ const MobileFooterMessage = styled.p`
 `;
 
 const MobileFooter: React.FC = () => {
+  const navigate = useNavigate();
+  
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    // If we're not on home page, navigate to home first
+    if (window.location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
+  };
+
+  const handleNavigation = (path: string) => {
+    navigate(path);
   };
 
   return (
@@ -193,10 +211,10 @@ const MobileFooter: React.FC = () => {
         <MobileFooterContent>
           <MobileFooterLogo>
             <MobileFooterLogoLink 
-              href="#home"
+              href="/"
               onClick={(e) => {
                 e.preventDefault();
-                scrollToSection('home');
+                handleNavigation('/');
               }}
             >
               <img src="/ShipwithKushal Logo.png" alt="ShipwithKushal Logo" />
@@ -205,53 +223,59 @@ const MobileFooter: React.FC = () => {
 
           <MobileFooterNav>
             <MobileFooterNavRow>
-              <MobileFooterLink href="/about">About Me</MobileFooterLink>
               <MobileFooterLink 
-                href="#writing"
+                href="/about"
                 onClick={(e) => {
                   e.preventDefault();
-                  scrollToSection('writing');
+                  handleNavigation('/about');
                 }}
               >
-                Writing
+                About Me
               </MobileFooterLink>
               <MobileFooterLink 
-                href="#get-help"
+                href="/#what-i-do"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('what-i-do');
+                }}
+              >
+                What I Do
+              </MobileFooterLink>
+              <MobileFooterLink 
+                href="/resume"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavigation('/resume');
+                }}
+              >
+                Resume
+              </MobileFooterLink>
+            </MobileFooterNavRow>
+            <MobileFooterNavRow>
+              <MobileFooterLink 
+                href="/#latest-content"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('latest-content');
+                }}
+              >
+                Latest Content
+              </MobileFooterLink>
+              <MobileFooterLink 
+                href="/#get-in-touch"
                 onClick={(e) => {
                   e.preventDefault();
                   scrollToSection('get-in-touch');
                 }}
               >
-                Get Help
-              </MobileFooterLink>
-            </MobileFooterNavRow>
-            <MobileFooterNavRow>
-              <MobileFooterLink 
-                href="#resume"
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection('resume');
-                }}
-              >
-                Resume
+                Office Hours
               </MobileFooterLink>
               <MobileFooterLink 
-                href="#projects"
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection('projects');
-                }}
+                href="/KushalHP_CV_Product.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Projects
-              </MobileFooterLink>
-              <MobileFooterLink 
-                href="#downloads"
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection('downloads');
-                }}
-              >
-                Downloads
+                Download CV
               </MobileFooterLink>
             </MobileFooterNavRow>
           </MobileFooterNav>
@@ -259,20 +283,33 @@ const MobileFooter: React.FC = () => {
           <MobileFooterDivider />
 
           <MobileFooterSocial>
-            <MobileSocialLink href="#" aria-label="LinkedIn">
+            <MobileSocialLink 
+              href="https://linkedin.com/in/kushal-hp-09121995" 
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
               <i className="fab fa-linkedin-in"></i>
             </MobileSocialLink>
-            <MobileSocialLink href="#" aria-label="GitHub">
+            <MobileSocialLink 
+              href="https://github.com/hpkushal" 
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
               <i className="fab fa-github"></i>
             </MobileSocialLink>
-            <MobileSocialLink href="#" aria-label="Email">
+            <MobileSocialLink 
+              href="mailto:hp.kushal95@outlook.com" 
+              aria-label="Email"
+            >
               <i className="fas fa-envelope"></i>
             </MobileSocialLink>
-            <MobileSocialLink href="#" aria-label="Facebook">
-              <i className="fab fa-facebook-f"></i>
-            </MobileSocialLink>
-            <MobileSocialLink href="#" aria-label="Instagram">
-              <i className="fab fa-instagram"></i>
+            <MobileSocialLink 
+              href="tel:+19024033023" 
+              aria-label="Phone"
+            >
+              <i className="fas fa-phone"></i>
             </MobileSocialLink>
           </MobileFooterSocial>
 
