@@ -25,15 +25,24 @@ const MobileNavContainer = styled.nav<{ isHidden: boolean }>`
 `;
 
 const MobileLogo = styled(Link)`
-  font-family: 'Dancing Script', cursive;
-  font-size: 24px;
-  font-weight: 700;
-  color: white;
+  display: flex;
+  align-items: center;
   text-decoration: none;
   transition: all 0.3s ease;
 
   &:hover {
-    color: #feca57;
+    transform: scale(1.1);
+  }
+
+  img {
+    height: 32px;
+    width: auto;
+    filter: brightness(0) invert(1);
+    transition: all 0.3s ease;
+    
+    &:hover {
+      filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(35deg);
+    }
   }
 `;
 
@@ -242,7 +251,9 @@ const MobileNavigation: React.FC = () => {
   return (
     <>
       <MobileNavContainer isHidden={isHidden}>
-        <MobileLogo to="/">Kushal</MobileLogo>
+        <MobileLogo to="/">
+          <img src="/ShipwithKushal Logo.png" alt="ShipwithKushal Logo" />
+        </MobileLogo>
       </MobileNavContainer>
 
       <FloatingHamburgerButton isOpen={isOpen} onClick={toggleMenu}>
@@ -291,19 +302,9 @@ const MobileNavigation: React.FC = () => {
             </MobileMenuLink>
           </MobileMenuItem>
           <MobileMenuItem>
-            <MobileMenuLink
-              href="#resume"
-              onClick={(e) => {
-                e.preventDefault();
-                if (location.pathname !== '/') {
-                  window.location.href = '/#resume';
-                } else {
-                  scrollToSection('resume');
-                }
-              }}
-            >
+            <MobileRouterLink to="/resume" onClick={closeMenu}>
               Resume
-            </MobileMenuLink>
+            </MobileRouterLink>
           </MobileMenuItem>
           <MobileMenuItem>
             <MobileMenuLink

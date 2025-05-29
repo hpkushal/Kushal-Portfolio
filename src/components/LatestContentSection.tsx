@@ -418,7 +418,7 @@ const LatestContentSection: React.FC = () => {
           <HeaderVisual>
             <LottieContentContainer>
               <DotLottieReact
-                src="https://lottie.host/c808b92b-a13a-46ce-a4c8-becad30e6fc1/MzVoxeVy5K.lottie"
+                src="https://lottie.host/236d2e30-1f80-4cf1-ab7d-86a0c4358e4a/r0ooDbPvu7.lottie"
                 loop
                 autoplay
                 style={{

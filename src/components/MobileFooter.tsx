@@ -44,17 +44,25 @@ const MobileFooterLogo = styled.div`
 `;
 
 const MobileFooterLogoLink = styled.a`
-  font-family: 'Dancing Script', cursive;
-  font-size: 28px;
-  font-weight: 700;
-  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   transition: all 0.3s ease;
   touch-action: manipulation;
 
   &:hover, &:active {
-    color: #667eea;
     transform: scale(1.05);
+  }
+
+  img {
+    height: 40px;
+    width: auto;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      filter: brightness(1.1);
+    }
   }
 `;
 
@@ -191,7 +199,7 @@ const MobileFooter: React.FC = () => {
                 scrollToSection('home');
               }}
             >
-              Kushal
+              <img src="/ShipwithKushal Logo.png" alt="ShipwithKushal Logo" />
             </MobileFooterLogoLink>
           </MobileFooterLogo>
 

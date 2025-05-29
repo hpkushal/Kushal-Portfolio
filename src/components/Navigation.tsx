@@ -142,21 +142,30 @@ const NavLogo = styled.div<{ isCompact: boolean }>`
 `;
 
 const Logo = styled(Link)<{ isCompact: boolean }>`
-  font-family: 'Dancing Script', cursive;
-  font-size: ${props => props.isCompact ? '24px' : '28px'};
-  font-weight: 700;
-  color: white;
+  display: flex;
+  align-items: center;
   text-decoration: none;
   transition: all 0.3s ease;
 
   &:hover {
     transform: scale(1.1);
-    color: #feca57;
+  }
+
+  img {
+    height: ${props => props.isCompact ? '32px' : '40px'};
+    width: auto;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: brightness(0) invert(1);
+    
+    &:hover {
+      filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(35deg);
+    }
   }
 
   ${media.mobile} {
-    font-size: 24px;
-    ${props => props.isCompact && `font-size: 20px;`}
+    img {
+      height: ${props => props.isCompact ? '28px' : '32px'};
+    }
   }
 `;
 
@@ -258,25 +267,17 @@ const Navigation: React.FC = () => {
             to="/" 
             isCompact={isCompact}
           >
-            Kushal
+            <img src="/ShipwithKushal Logo.png" alt="ShipwithKushal Logo" />
           </Logo>
         </NavLogo>
 
         <NavSection isCompact={isCompact}>
-          <NavLink 
-            href="#resume" 
+          <RouterNavLink 
+            to="/resume" 
             isCompact={isCompact}
-            onClick={(e) => {
-              e.preventDefault();
-              if (location.pathname !== '/') {
-                window.location.href = '/#resume';
-              } else {
-                scrollToSection('resume');
-              }
-            }}
           >
             Resume
-          </NavLink>
+          </RouterNavLink>
           <NavLink 
             href="#projects" 
             isCompact={isCompact}

@@ -117,21 +117,29 @@ const FooterLogo = styled.div`
 `;
 
 const FooterLogoLink = styled.a`
-  font-family: 'Dancing Script', cursive;
-  font-size: 32px;
-  font-weight: 700;
-  color: #333;
+  display: flex;
+  align-items: center;
   text-decoration: none;
   transition: all 0.3s ease;
-  position: relative;
 
   &:hover {
-    color: #667eea;
     transform: scale(1.1);
   }
 
+  img {
+    height: 48px;
+    width: auto;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      filter: brightness(1.1);
+    }
+  }
+
   ${media.mobile} {
-    font-size: 28px;
+    img {
+      height: 40px;
+    }
   }
 `;
 
@@ -312,7 +320,7 @@ const Footer: React.FC = () => {
                   scrollToSection('home');
                 }}
               >
-                Kushal
+                <img src="/ShipwithKushal Logo.png" alt="ShipwithKushal Logo" />
               </FooterLogoLink>
             </FooterLogo>
 
