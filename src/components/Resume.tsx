@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { media } from '../styles/GlobalStyles';
+import OfficeHoursButtonComponent from './OfficeHoursButton';
 
 // Animations
 const fadeInUp = keyframes`
@@ -206,10 +207,41 @@ const Section = styled.section`
 
 // Hero Section (moved to main content)
 const HeroSection = styled.section`
-  text-align: center;
   padding: 0 0 60px;
   animation: ${fadeInUp} 1s ease-out;
   margin-bottom: 40px;
+`;
+
+const HeroGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 40px;
+  
+  ${media.tablet} {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+`;
+
+const HeroLeftContent = styled.div`
+  text-align: center;
+  
+  ${media.tablet} {
+    text-align: center;
+  }
+`;
+
+const HeroRightContent = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  
+  ${media.tablet} {
+    justify-content: center;
+  }
 `;
 
 const HeroTitle = styled.h1`
@@ -1536,15 +1568,22 @@ const Resume: React.FC = () => {
       <ContentWrapper>
         <HeroContentWrapper>
           <HeroSection>
-            <HeroTitle>Kushal HP</HeroTitle>
-            <HeroSubtitle>Product Team Lead · Digital Marketing Specialist · Solution Delivery</HeroSubtitle>
-            <ContactInfo>
-              <ContactItem href="tel:+19024033023">📞 (+1) 902-403-3023</ContactItem>
-              <ContactItem href="mailto:hp.kushal95@outlook.com">✉️ hp.kushal95@outlook.com</ContactItem>
-              <ContactItem href="https://linkedin.com/in/kushal-hp-09121995" target="_blank">
-                🔗 LinkedIn Profile
-              </ContactItem>
-            </ContactInfo>
+            <HeroGrid>
+              <HeroLeftContent>
+                <HeroTitle>Kushal HP</HeroTitle>
+                <HeroSubtitle>Product Team Lead · Digital Marketing Specialist · Solution Delivery</HeroSubtitle>
+                <ContactInfo>
+                  <ContactItem href="tel:+19024033023">📞 (+1) 902-403-3023</ContactItem>
+                  <ContactItem href="mailto:hp.kushal95@outlook.com">✉️ hp.kushal95@outlook.com</ContactItem>
+                  <ContactItem href="https://linkedin.com/in/kushal-hp-09121995" target="_blank">
+                    🔗 LinkedIn Profile
+                  </ContactItem>
+                </ContactInfo>
+              </HeroLeftContent>
+              <HeroRightContent>
+                <OfficeHoursButtonComponent />
+              </HeroRightContent>
+            </HeroGrid>
             
             <StatsGrid ref={statsRef}>
               <StatCard>
@@ -1564,16 +1603,16 @@ const Resume: React.FC = () => {
                 <StatLabel>Global Markets</StatLabel>
               </StatCard>
             </StatsGrid>
-          </HeroSection>
 
-          <SummarySection>
-            <SummaryText>
-              Product Leader with 6+ years of expertise in successful digital product launches and optimizing global market presence. 
-              My experience in leveraging AI, machine learning, and digital marketing strategies sets me apart as a trailblazer in product evolution. 
-              Recognized for transforming market insights into high-impact growth strategies, I have successfully driven product lifecycle success 
-              across global markets, including LATAM, Europe, Australia, and India.
-            </SummaryText>
-          </SummarySection>
+            <SummarySection>
+              <SummaryText>
+                Product Leader with 6+ years of expertise in successful digital product launches and optimizing global market presence. 
+                My experience in leveraging AI, machine learning, and digital marketing strategies sets me apart as a trailblazer in product evolution. 
+                Recognized for transforming market insights into high-impact growth strategies, I have successfully driven product lifecycle success 
+                across global markets, including LATAM, Europe, Australia, and India.
+              </SummaryText>
+            </SummarySection>
+          </HeroSection>
         </HeroContentWrapper>
 
         <MainContentWrapper>
