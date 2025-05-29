@@ -319,22 +319,22 @@ const Footer: React.FC = () => {
                 About Me
               </FooterLink>
               <FooterLink 
-                href="/#what-i-do"
+                href="#writing"
                 onClick={(e) => {
                   e.preventDefault();
-                  scrollToSection('what-i-do');
+                  scrollToSection('writing');
                 }}
               >
-                What I Do
+                Writing
               </FooterLink>
               <FooterLink 
-                href="/#get-in-touch"
+                href="#get-help"
                 onClick={(e) => {
                   e.preventDefault();
                   scrollToSection('get-in-touch');
                 }}
               >
-                Office Hours
+                Get Help
               </FooterLink>
             </FooterNavSection>
 
@@ -361,20 +361,22 @@ const Footer: React.FC = () => {
                 Resume
               </FooterLink>
               <FooterLink 
-                href="/#latest-content"
+                href="#projects"
                 onClick={(e) => {
                   e.preventDefault();
-                  scrollToSection('latest-content');
+                  scrollToSection('projects');
                 }}
               >
-                Latest Content
+                Projects
               </FooterLink>
               <FooterLink 
-                href="/KushalHP_CV_Product.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#downloads"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('downloads');
+                }}
               >
-                Download CV
+                Downloads
               </FooterLink>
             </FooterNavSection>
           </FooterNav>

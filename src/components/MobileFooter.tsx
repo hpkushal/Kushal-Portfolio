@@ -233,14 +233,25 @@ const MobileFooter: React.FC = () => {
                 About Me
               </MobileFooterLink>
               <MobileFooterLink 
-                href="/#what-i-do"
+                href="#writing"
                 onClick={(e) => {
                   e.preventDefault();
-                  scrollToSection('what-i-do');
+                  scrollToSection('writing');
                 }}
               >
-                What I Do
+                Writing
               </MobileFooterLink>
+              <MobileFooterLink 
+                href="#get-help"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('get-in-touch');
+                }}
+              >
+                Get Help
+              </MobileFooterLink>
+            </MobileFooterNavRow>
+            <MobileFooterNavRow>
               <MobileFooterLink 
                 href="/resume"
                 onClick={(e) => {
@@ -250,32 +261,23 @@ const MobileFooter: React.FC = () => {
               >
                 Resume
               </MobileFooterLink>
-            </MobileFooterNavRow>
-            <MobileFooterNavRow>
               <MobileFooterLink 
-                href="/#latest-content"
+                href="#projects"
                 onClick={(e) => {
                   e.preventDefault();
-                  scrollToSection('latest-content');
+                  scrollToSection('projects');
                 }}
               >
-                Latest Content
+                Projects
               </MobileFooterLink>
               <MobileFooterLink 
-                href="/#get-in-touch"
+                href="#downloads"
                 onClick={(e) => {
                   e.preventDefault();
-                  scrollToSection('get-in-touch');
+                  scrollToSection('downloads');
                 }}
               >
-                Office Hours
-              </MobileFooterLink>
-              <MobileFooterLink 
-                href="/KushalHP_CV_Product.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Download CV
+                Downloads
               </MobileFooterLink>
             </MobileFooterNavRow>
           </MobileFooterNav>
