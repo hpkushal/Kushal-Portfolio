@@ -62,6 +62,7 @@ const IntroSection = styled.div`
   }
 `;
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const HeroLottie = styled.div`
   display: flex;
   justify-content: center;
@@ -92,6 +93,7 @@ const MainTitle = styled(motion.h1)`
   }
 `;
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const IntroText = styled(motion.p)`
   font-size: 1.3rem;
   line-height: 1.7;
@@ -182,6 +184,7 @@ const ProfileImage = styled.img`
   }
 `;
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const LottieContainer = styled.div`
   position: relative;
   width: 400px;

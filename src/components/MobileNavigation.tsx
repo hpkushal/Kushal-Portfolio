@@ -248,11 +248,20 @@ const MobileNavigation: React.FC = () => {
     closeMenu();
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'auto'
+    });
+    closeMenu();
+  };
+
   return (
     <>
       <MobileNavContainer isHidden={isHidden}>
-        <MobileLogo to="/">
-          <img src="/ShipwithKushal Logo.png" alt="ShipwithKushal Logo" />
+        <MobileLogo to="/" onClick={scrollToTop}>
+                          <img src="/kushal-hp-logo.svg" alt="Kushal HP Logo" />
         </MobileLogo>
       </MobileNavContainer>
 
@@ -267,24 +276,14 @@ const MobileNavigation: React.FC = () => {
       <MobileMenu isOpen={isOpen}>
         <MobileMenuList>
           <MobileMenuItem>
-            <MobileRouterLink to="/about" onClick={closeMenu}>
+            <MobileRouterLink to="/about" onClick={scrollToTop}>
               About Me
             </MobileRouterLink>
           </MobileMenuItem>
           <MobileMenuItem>
-            <MobileMenuLink
-              href="#writing"
-              onClick={(e) => {
-                e.preventDefault();
-                if (location.pathname !== '/') {
-                  window.location.href = '/#writing';
-                } else {
-                  scrollToSection('writing');
-                }
-              }}
-            >
-              Writing
-            </MobileMenuLink>
+            <MobileRouterLink to="/writings" onClick={scrollToTop}>
+              Writings
+            </MobileRouterLink>
           </MobileMenuItem>
           <MobileMenuItem>
             <MobileMenuLink
@@ -302,12 +301,12 @@ const MobileNavigation: React.FC = () => {
             </MobileMenuLink>
           </MobileMenuItem>
           <MobileMenuItem>
-            <MobileRouterLink to="/resume" onClick={closeMenu}>
+            <MobileRouterLink to="/resume" onClick={scrollToTop}>
               Resume
             </MobileRouterLink>
           </MobileMenuItem>
           <MobileMenuItem>
-            <MobileRouterLink to="/projects" onClick={closeMenu}>
+            <MobileRouterLink to="/projects" onClick={scrollToTop}>
               Projects
             </MobileRouterLink>
           </MobileMenuItem>

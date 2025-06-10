@@ -317,7 +317,20 @@ const CaseStudyLayout: React.FC<CaseStudyLayoutProps> = ({
     <>
       <CaseStudyContainer>
         <Breadcrumb>
-          <a href="/projects">← Back to Projects</a>
+          <a 
+            href="/projects"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'auto'
+              });
+              window.location.href = '/projects';
+            }}
+          >
+            ← Back to Projects
+          </a>
         </Breadcrumb>
 
         <Header>

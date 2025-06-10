@@ -202,6 +202,11 @@ const MobileFooter: React.FC = () => {
   };
 
   const handleNavigation = (path: string) => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'auto'
+    });
     navigate(path);
   };
 
@@ -217,7 +222,7 @@ const MobileFooter: React.FC = () => {
                 handleNavigation('/');
               }}
             >
-              <img src="/ShipwithKushal Logo.png" alt="ShipwithKushal Logo" />
+              <img src="/kushal-hp-logo.svg" alt="Kushal HP Logo" />
             </MobileFooterLogoLink>
           </MobileFooterLogo>
 

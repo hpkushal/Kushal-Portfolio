@@ -222,6 +222,14 @@ const Navigation: React.FC = () => {
     }
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'auto'
+    });
+  };
+
   return (
     <FloatingNav isHidden={isHidden} isCompact={isCompact}>
       <NavContainer isCompact={isCompact}>
@@ -229,23 +237,17 @@ const Navigation: React.FC = () => {
           <RouterNavLink 
             to="/about" 
             isCompact={isCompact}
+            onClick={scrollToTop}
           >
             About Me
           </RouterNavLink>
-          <NavLink 
-            href="#writing" 
+          <RouterNavLink 
+            to="/writings" 
             isCompact={isCompact}
-            onClick={(e) => {
-              e.preventDefault();
-              if (location.pathname !== '/') {
-                window.location.href = '/#writing';
-              } else {
-                scrollToSection('writing');
-              }
-            }}
+            onClick={scrollToTop}
           >
-            Writing
-          </NavLink>
+            Writings
+          </RouterNavLink>
           <NavLink 
             href="#get-help" 
             isCompact={isCompact}
@@ -266,8 +268,9 @@ const Navigation: React.FC = () => {
           <Logo 
             to="/" 
             isCompact={isCompact}
+            onClick={scrollToTop}
           >
-            <img src="/ShipwithKushal Logo.png" alt="ShipwithKushal Logo" />
+                            <img src="/kushal-hp-logo.svg" alt="Kushal HP Logo" />
           </Logo>
         </NavLogo>
 
@@ -275,12 +278,14 @@ const Navigation: React.FC = () => {
           <RouterNavLink 
             to="/resume" 
             isCompact={isCompact}
+            onClick={scrollToTop}
           >
             Resume
           </RouterNavLink>
           <RouterNavLink 
             to="/projects" 
             isCompact={isCompact}
+            onClick={scrollToTop}
           >
             Projects
           </RouterNavLink>

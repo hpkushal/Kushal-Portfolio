@@ -34,6 +34,11 @@ const OfficeHoursButtonComponent: React.FC = () => {
 
   const handleClick = () => {
     // Navigate to home page and scroll to Office Hours section
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'auto'
+    });
     navigate('/');
     setTimeout(() => {
       const element = document.getElementById('get-in-touch');

@@ -1,20 +1,20 @@
 {
-  "short_name": "ShipwithKushal",
-  "name": "ShipwithKushal - Interactive Portfolio",
+  "short_name": "Kushal HP",
+  "name": "Kushal HP - Interactive Portfolio",
   "icons": [
     {
-      "src": "shipwithkushal Favicon.png",
+      "src": "kushal-hp-favicon.svg",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/png"
+      "type": "image/svg+xml"
     },
     {
-      "src": "shipwithkushal Favicon.png",
-      "type": "image/png",
+      "src": "kushal-hp-favicon.svg",
+      "type": "image/svg+xml",
       "sizes": "192x192"
     },
     {
-      "src": "shipwithkushal Favicon.png",
-      "type": "image/png",
+      "src": "kushal-hp-favicon.svg",
+      "type": "image/svg+xml",
       "sizes": "512x512"
     }
   ],

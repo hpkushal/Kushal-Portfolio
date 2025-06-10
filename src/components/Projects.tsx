@@ -15,11 +15,13 @@ const fadeInUp = keyframes`
   }
 `;
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const float = keyframes`
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
 `;
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const progressAnimation = keyframes`
   from { width: 0%; }
   to { width: var(--width); }
@@ -622,6 +624,11 @@ const Projects: React.FC = () => {
   };
 
   const navigateToCaseStudy = (url: string) => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'auto'
+    });
     navigate(url);
   };
 

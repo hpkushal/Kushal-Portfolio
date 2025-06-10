@@ -15,12 +15,14 @@ const fadeInUp = keyframes`
   }
 `;
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const pulse = keyframes`
   0% { transform: scale(1); }
   50% { transform: scale(1.05); }
   100% { transform: scale(1); }
 `;
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const progressFill = keyframes`
   from {
     width: 0%;
