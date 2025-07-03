@@ -222,7 +222,7 @@ const MobileFooter: React.FC = () => {
                 handleNavigation('/');
               }}
             >
-              <img src="/kushal-hp-logo.svg" alt="Kushal HP Logo" />
+              <img src="/New KHP LOGO.png" alt="KHP Logo" />
             </MobileFooterLogoLink>
           </MobileFooterLogo>
 

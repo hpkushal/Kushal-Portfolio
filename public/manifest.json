@@ -3,18 +3,18 @@
   "name": "Kushal HP - Interactive Portfolio",
   "icons": [
     {
-      "src": "kushal-hp-favicon.svg",
+      "src": "New Favicon.png",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/svg+xml"
+      "type": "image/png"
     },
     {
-      "src": "kushal-hp-favicon.svg",
-      "type": "image/svg+xml",
+      "src": "New Favicon.png",
+      "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "kushal-hp-favicon.svg",
-      "type": "image/svg+xml",
+      "src": "New Favicon.png",
+      "type": "image/png",
       "sizes": "512x512"
     }
   ],

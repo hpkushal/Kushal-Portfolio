@@ -122,13 +122,17 @@ const FooterLogoLink = styled.a`
   align-items: center;
   text-decoration: none;
   transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
 
   &:hover {
     transform: scale(1.1);
   }
 
   img {
-    height: 48px;
+    height: 80px;
+    margin-top: -20px;
+    margin-bottom: -20px;
     width: auto;
     transition: all 0.3s ease;
     
@@ -140,6 +144,8 @@ const FooterLogoLink = styled.a`
   ${media.mobile} {
     img {
       height: 40px;
+      margin-top: 0;
+      margin-bottom: 0;
     }
   }
 `;
@@ -351,7 +357,7 @@ const Footer: React.FC = () => {
                   handleNavigation('/');
                 }}
               >
-                <img src="/kushal-hp-logo.svg" alt="Kushal HP Logo" />
+                <img src="/New KHP LOGO.png" alt="KHP Logo" />
               </FooterLogoLink>
             </FooterLogo>
 

@@ -146,13 +146,17 @@ const Logo = styled(Link)<{ isCompact: boolean }>`
   align-items: center;
   text-decoration: none;
   transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
 
   &:hover {
     transform: scale(1.1);
   }
 
   img {
-    height: ${props => props.isCompact ? '32px' : '40px'};
+    height: ${props => props.isCompact ? '48px' : '80px'};
+    margin-top: -20px;
+    margin-bottom: -20px;
     width: auto;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     filter: brightness(0) invert(1);
@@ -165,6 +169,8 @@ const Logo = styled(Link)<{ isCompact: boolean }>`
   ${media.mobile} {
     img {
       height: ${props => props.isCompact ? '28px' : '32px'};
+      margin-top: 0;
+      margin-bottom: 0;
     }
   }
 `;
@@ -270,7 +276,7 @@ const Navigation: React.FC = () => {
             isCompact={isCompact}
             onClick={scrollToTop}
           >
-                            <img src="/kushal-hp-logo.svg" alt="Kushal HP Logo" />
+            <img src="/New KHP LOGO.png" alt="KHP Logo" />
           </Logo>
         </NavLogo>
 
