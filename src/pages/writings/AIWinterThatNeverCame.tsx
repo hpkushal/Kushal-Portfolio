@@ -47,8 +47,8 @@ const AIWinterThatNeverCame: React.FC = () => {
       </p>
 
       <img 
-        src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=400&fit=crop" 
-        alt="Vintage computer terminals representing early AI research"
+        src="https://images.unsplash.com/photo-1464983953574-0892a716854b?w=800&h=400&fit=crop"
+        alt="Historic computer lab symbolizing early AI research and the dawn of AI winters"
       />
 
       <p>
@@ -98,8 +98,8 @@ const AIWinterThatNeverCame: React.FC = () => {
       </p>
 
       <img 
-        src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop" 
-        alt="Business growth charts and analytics"
+        src="https://images.unsplash.com/photo-1508385082359-f48b1c1b1f57?w=800&h=400&fit=crop"
+        alt="Modern business growth with AI-driven analytics and digital transformation"
       />
 
       <h3>Democratization vs. Centralization</h3>
@@ -149,8 +149,8 @@ const AIWinterThatNeverCame: React.FC = () => {
       </p>
 
       <img 
-        src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=400&fit=crop" 
-        alt="Investment and venture capital meeting"
+        src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=400&fit=crop"
+        alt="AI investment and venture capital, futuristic finance meeting"
       />
 
       <h2>Challenges That Could Still Trigger a Winter</h2>

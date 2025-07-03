@@ -314,7 +314,7 @@ const Tag = styled.span`
 `;
 
 // Article data
-const articles = [
+export const articles = [
   // New articles (Latest)
   {
     id: 'great-ai-model-commoditization',
@@ -526,6 +526,9 @@ const Writings: React.FC = () => {
     ? articles 
     : articles.filter(article => article.category === selectedCategory);
 
+  // Sort articles by date (descending)
+  const sortedArticles = [...filteredArticles].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
   // Calculate dynamic stats
   const totalArticles = articles.length;
   const totalCategories = categories.length - 1; // Subtract 'All' category
@@ -582,7 +585,7 @@ const Writings: React.FC = () => {
         </FilterSection>
 
         <ArticlesGrid>
-          {filteredArticles.map((article) => (
+          {sortedArticles.map((article) => (
             <ArticleCard
               key={article.id}
               onClick={() => navigateToArticle(article.id)}

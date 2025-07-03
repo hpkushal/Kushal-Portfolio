@@ -105,8 +105,8 @@ export const GlobalStyles = createGlobalStyle`
 
 // Responsive breakpoints
 export const breakpoints = {
-  mobile: '480px',
-  tablet: '768px',
+  mobile: '768px',
+  tablet: '1024px',
   desktop: '1024px',
   large: '1200px',
 };

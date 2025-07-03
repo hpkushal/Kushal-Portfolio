@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { media } from '../styles/GlobalStyles';
+import { articles as writingsArticles } from './Writings';
+import { useNavigate } from 'react-router-dom';
 
 const LatestContentContainer = styled.section`
   padding: 100px 20px;
@@ -369,42 +371,13 @@ const ViewAllBtn = styled.a`
   }
 `;
 
-const articles = [
-  {
-    tag: 'How to',
-    icon: 'fas fa-lightbulb',
-    iconVariant: 'pink' as const,
-    title: 'How the latest tech products do early access beta\'s',
-    description: 'I\'ve searched high & low for the hottest beta access techniques in tech to show you the dos/don\'ts with early access onboarding. Here\'s what I found.',
-    link: '#'
-  },
-  {
-    tag: 'How to',
-    icon: 'fas fa-fire',
-    iconVariant: 'blue' as const,
-    title: 'Comprehensive list of \'Smoke Test\' techniques',
-    description: 'A definitive list of modern, alternative \'Smoke Test\' techniques to help test early signs of desirability with your target market.',
-    link: '#'
-  },
-  {
-    tag: 'Product',
-    icon: 'fas fa-rocket',
-    iconVariant: 'green' as const,
-    title: 'Can I build an online shoe retailer with no shoes?',
-    description: 'Turns out you can - or \'could\' should I say. This is Part 1 in my series of concierge MVP examples from well known tech startups.',
-    link: '#'
-  },
-  {
-    tag: 'Case Study',
-    icon: 'fas fa-chart-line',
-    iconVariant: 'purple' as const,
-    title: 'From idea to 10K users: A SaaS journey',
-    description: 'Deep dive into how we took a simple productivity tool from concept to 10,000 active users in 6 months using lean startup principles.',
-    link: '#'
-  }
-];
-
 const LatestContentSection: React.FC = () => {
+  const navigate = useNavigate();
+  // Sort articles by date (descending) and take the latest 4
+  const latestArticles = [...writingsArticles]
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice(0, 4);
+
   return (
     <LatestContentContainer id="latest-content">
       <Container>
@@ -432,23 +405,21 @@ const LatestContentSection: React.FC = () => {
         </ContentHeader>
 
         <ArticlesGrid>
-          {articles.map((article, index) => (
-            <ArticleCard key={index}>
+          {latestArticles.map((article) => (
+            <ArticleCard key={article.id} onClick={() => navigate(`/writings/${article.id}`)} style={{ cursor: 'pointer' }}>
               <ArticleHeader>
-                <ArticleTag>{article.tag}</ArticleTag>
-                <ArticleIcon variant={article.iconVariant}>
-                  <i className={article.icon}></i>
-                </ArticleIcon>
+                <ArticleTag>{article.category}</ArticleTag>
+                {/* Optionally, you can add an icon or image here if desired */}
               </ArticleHeader>
               <ArticleTitle>{article.title}</ArticleTitle>
-              <ArticleDescription>{article.description}</ArticleDescription>
-              <ArticleLink href={article.link}>Learn More</ArticleLink>
+              <ArticleDescription>{article.excerpt}</ArticleDescription>
+              <ArticleLink href={`/writings/${article.id}`} onClick={e => { e.stopPropagation(); navigate(`/writings/${article.id}`); }}>Read Article</ArticleLink>
             </ArticleCard>
           ))}
         </ArticlesGrid>
 
         <ContentFooter>
-          <ViewAllBtn href="#">View All Articles</ViewAllBtn>
+          <ViewAllBtn href="/writings" onClick={e => { e.preventDefault(); navigate('/writings'); }}>View All Articles</ViewAllBtn>
         </ContentFooter>
       </Container>
     </LatestContentContainer>
