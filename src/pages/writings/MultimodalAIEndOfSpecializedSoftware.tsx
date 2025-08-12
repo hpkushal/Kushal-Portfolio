@@ -11,7 +11,7 @@ const MultimodalAIEndOfSpecializedSoftware: React.FC = () => {
       date="November 15, 2024"
       readTime="12 min read"
       heroImage={{
-        src: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&h=600&fit=crop",
+        src: "https://source.unsplash.com/1200x600/?multimodal,ai,software&sig=103",
         alt: "Multimodal AI processing different types of data simultaneously"
       }}
       keyTakeaways={[

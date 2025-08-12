@@ -11,7 +11,7 @@ const GreatAITalentWar: React.FC = () => {
       date="April 18, 2025"
       readTime="10 min read"
       heroImage={{
-        src: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=600&fit=crop",
+        src: "https://source.unsplash.com/1200x600/?talent,team,engineering&sig=113",
         alt: "Diverse tech professionals collaborating on AI projects"
       }}
       keyTakeaways={[

@@ -11,7 +11,7 @@ const AIWinterThatNeverCame: React.FC = () => {
       date="June 15, 2025"
       readTime="8 min read"
       heroImage={{
-        src: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=600&fit=crop",
+        src: "https://source.unsplash.com/1200x600/?ai,trend,market&sig=102",
         alt: "AI and technology visualization with neural networks"
       }}
       keyTakeaways={[

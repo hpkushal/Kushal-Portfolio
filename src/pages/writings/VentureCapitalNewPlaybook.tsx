@@ -11,7 +11,7 @@ const VentureCapitalNewPlaybook: React.FC = () => {
       date="March 8, 2025"
       readTime="11 min read"
       heroImage={{
-        src: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=1200&h=600&fit=crop",
+        src: "https://source.unsplash.com/1200x600/?venture,capital,meeting&sig=112",
         alt: "Venture capital meeting with investors and entrepreneurs"
       }}
       keyTakeaways={[

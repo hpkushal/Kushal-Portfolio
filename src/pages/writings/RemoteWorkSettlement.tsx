@@ -11,7 +11,7 @@ const RemoteWorkSettlement: React.FC = () => {
       date="January 25, 2025"
       readTime="7 min read"
       heroImage={{
-        src: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&h=600&fit=crop",
+        src: "https://source.unsplash.com/1200x600/?remote,work,home-office&sig=110",
         alt: "Remote worker collaborating in a home office setup"
       }}
       keyTakeaways={[

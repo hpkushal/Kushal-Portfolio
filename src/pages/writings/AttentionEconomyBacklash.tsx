@@ -11,7 +11,7 @@ const AttentionEconomyBacklash: React.FC = () => {
       date="July 12, 2024"
       readTime="9 min read"
       heroImage={{
-        src: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=600&fit=crop",
+        src: "https://source.unsplash.com/1200x600/?minimalism,focus,phone&sig=108",
         alt: "Person practicing digital minimalism with simplified devices"
       }}
       keyTakeaways={[

@@ -11,7 +11,7 @@ const AIInfrastructureWars: React.FC = () => {
       date="October 8, 2024"
       readTime="13 min read"
       heroImage={{
-        src: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=1200&h=600&fit=crop",
+        src: "https://source.unsplash.com/1200x600/?data-center,servers,ai&sig=105",
         alt: "Data center infrastructure powering AI systems"
       }}
       keyTakeaways={[

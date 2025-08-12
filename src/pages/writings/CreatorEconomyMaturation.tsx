@@ -11,7 +11,7 @@ const CreatorEconomyMaturation: React.FC = () => {
       date="August 5, 2024"
       readTime="11 min read"
       heroImage={{
-        src: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=1200&h=600&fit=crop",
+        src: "https://source.unsplash.com/1200x600/?creator,studio,content&sig=107",
         alt: "Content creator working in professional studio setup"
       }}
       keyTakeaways={[

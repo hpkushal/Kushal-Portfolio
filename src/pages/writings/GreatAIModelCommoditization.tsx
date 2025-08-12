@@ -11,7 +11,7 @@ const GreatAIModelCommoditization: React.FC = () => {
       date="December 18, 2024"
       readTime="11 min read"
       heroImage={{
-        src: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=600&fit=crop",
+        src: "https://source.unsplash.com/1200x600/?ai,neural-network&sig=101",
         alt: "Abstract visualization of AI models and data processing"
       }}
       keyTakeaways={[

@@ -11,7 +11,7 @@ const AIGovernanceGap: React.FC = () => {
       date="November 28, 2024"
       readTime="10 min read"
       heroImage={{
-        src: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=600&fit=crop",
+        src: "https://source.unsplash.com/1200x600/?policy,government,technology&sig=109",
         alt: "Government buildings and digital networks representing AI governance"
       }}
       keyTakeaways={[

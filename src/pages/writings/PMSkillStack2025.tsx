@@ -11,7 +11,7 @@ const PMSkillStack2025: React.FC = () => {
       date="Aug 12, 2025"
       readTime="14 min read"
       heroImage={{
-        src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&h=600&fit=crop',
+        src: 'https://source.unsplash.com/1200x600/?product,management,dashboard&sig=100',
         alt: 'Product control room with dashboards and AI overlays'
       }}
       keyTakeaways={[

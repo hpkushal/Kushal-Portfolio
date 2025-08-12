@@ -11,7 +11,7 @@ const SubscriptionEconomyNextChapter: React.FC = () => {
       date="February 14, 2025"
       readTime="13 min read"
       heroImage={{
-        src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=600&fit=crop",
+        src: "https://source.unsplash.com/1200x600/?subscription,recurring,revenue&sig=111",
         alt: "Digital subscription services and recurring revenue business models"
       }}
       keyTakeaways={[

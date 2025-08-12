@@ -11,7 +11,7 @@ const PlatformEconomicsUnbundlingRebundling: React.FC = () => {
       date="September 15, 2024"
       readTime="14 min read"
       heroImage={{
-        src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=600&fit=crop",
+        src: "https://source.unsplash.com/1200x600/?network,platform,ecosystem&sig=106",
         alt: "Network visualization showing platform ecosystem connections"
       }}
       keyTakeaways={[

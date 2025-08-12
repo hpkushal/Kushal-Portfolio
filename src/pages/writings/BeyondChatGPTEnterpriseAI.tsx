@@ -11,7 +11,7 @@ const BeyondChatGPTEnterpriseAI: React.FC = () => {
       date="May 22, 2025"
       readTime="12 min read"
       heroImage={{
-        src: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&h=600&fit=crop",
+        src: "https://source.unsplash.com/1200x600/?enterprise,ai,workflow&sig=104",
         alt: "Enterprise AI implementation in a modern office environment"
       }}
       keyTakeaways={[
