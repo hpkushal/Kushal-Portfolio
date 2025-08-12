@@ -43,8 +43,9 @@ import AIRegulationInnovationBalance from './pages/writings/AIRegulationInnovati
 import ConsultingIndustryAIDisruption from './pages/writings/ConsultingIndustryAIDisruption';
 import GrowthHackingMaturation from './pages/writings/GrowthHackingMaturation';
 import PricingPsychologyRevolution from './pages/writings/PricingPsychologyRevolution';
-
-function App() {
+import PMSkillStack2025 from './pages/writings/PMSkillStack2025';
+ 
+ function App() {
   return (
     <Router>
       <GlobalStyles />
@@ -88,9 +89,10 @@ function App() {
           <Route path="/writings/ai-regulation-innovation-balance" element={<AIRegulationInnovationBalance />} />
           <Route path="/writings/consulting-industry-ai-disruption" element={<ConsultingIndustryAIDisruption />} />
           <Route path="/writings/growth-hacking-maturation" element={<GrowthHackingMaturation />} />
-          <Route path="/writings/pricing-psychology-revolution" element={<PricingPsychologyRevolution />} />
-          
-          <Route path="*" element={<NotFound />} />
+                    <Route path="/writings/pricing-psychology-revolution" element={<PricingPsychologyRevolution />} />
+          <Route path="/writings/pm-os-2025" element={<PMSkillStack2025 />} />
+           
+           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
         <MobileFooter />

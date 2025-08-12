@@ -316,18 +316,28 @@ const Tag = styled.span`
 // Article data
 export const articles = [
   // New articles (Latest)
-  {
-    id: 'great-ai-model-commoditization',
-    title: 'The Great AI Model Commoditization: Why GPT-5 Won\'t Matter',
-    excerpt: 'Analysis of how AI models are becoming commoditized and what really drives competitive advantage. Why infrastructure, not intelligence, determines the AI winners.',
-    category: 'AI & Technology',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop',
-    readTime: '11 min read',
-    date: 'Dec 18, 2024',
-    tags: ['AI Models', 'Commoditization', 'Business Strategy']
+    {
+    id: 'pm-os-2025',
+    title: 'The PM OS 2025: Delegation, Decisions, and Bets With Your AI Partner',
+    excerpt: 'A PM operating system for working with an AI partner: delegation, decision stories, and smart strategic bets.',
+    category: 'Business & Strategy',
+    image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=400&fit=crop',
+    readTime: '14 min read',
+    date: 'Aug 12, 2025',
+    tags: ['Product Management', 'AI Delegation', 'Data Storytelling', 'Strategy', 'Playbooks']
   },
-  {
-    id: 'ai-governance-gap',
+    {
+      id: 'great-ai-model-commoditization',
+      title: 'The Great AI Model Commoditization: Why GPT-5 Won\'t Matter',
+      excerpt: 'Analysis of how AI models are becoming commoditized and what really drives competitive advantage. Why infrastructure, not intelligence, determines the AI winners.',
+      category: 'AI & Technology',
+      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop',
+      readTime: '11 min read',
+      date: 'Dec 18, 2024',
+      tags: ['AI Models', 'Commoditization', 'Business Strategy']
+    },
+   {
+     id: 'ai-governance-gap',
     title: 'The AI Governance Gap: Why Regulation is Already Obsolete',
     excerpt: 'How AI development is outpacing regulatory frameworks and what this means for businesses. The challenge of governing technology that evolves faster than policy.',
     category: 'AI & Technology',

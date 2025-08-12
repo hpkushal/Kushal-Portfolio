@@ -182,16 +182,24 @@ const allArticles: Article[] = [
     readTime: '7 min read',
     date: 'Jan 25, 2025'
   },
-  {
-    id: 'death-of-ten-year-business-plan',
-    title: 'The Death of the 10-Year Business Plan: Why Agility Beats Strategy',
-    excerpt: 'How rapid tech changes are reshaping corporate planning.',
-    category: 'Business & Strategy',
-    readTime: '9 min read',
-    date: 'Jan 12, 2025'
-  },
-  // New articles
-  {
+    {
+     id: 'death-of-ten-year-business-plan',
+     title: 'The Death of the 10-Year Business Plan: Why Agility Beats Strategy',
+     excerpt: 'How rapid tech changes are reshaping corporate planning.',
+     category: 'Business & Strategy',
+     readTime: '9 min read',
+     date: 'Jan 12, 2025'
+   },
+       {
+      id: 'pm-os-2025',
+      title: 'The PM OS 2025: Delegation, Decisions, and Bets With Your AI Partner',
+      excerpt: 'A PM operating system for working with an AI partner: delegation, decision stories, and smart strategic bets.',
+      category: 'Business & Strategy',
+      readTime: '14 min read',
+      date: 'Aug 12, 2025'
+    },
+    // New articles
+   {
     id: 'great-ai-model-commoditization',
     title: 'The Great AI Model Commoditization: Why GPT-5 Won\'t Matter',
     excerpt: 'Analysis of how AI models are becoming commoditized and what really drives competitive advantage.',
